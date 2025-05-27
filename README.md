@@ -25,9 +25,11 @@ Criar uma estrutura funcional de NOC para fins de aprendizado com foco em infrae
 
 Foram importados dashboards públicos para visualização das métricas:
 
-![Node Exporter Full - ID 1860](images/grafana1.png)**: Mostra detalhes como uso de CPU, memória, disco, I/O de rede
-  
-![grafana-node-exporter](images/grafana2.png) : Infos de pods
+Mostra detalhes como uso de CPU, memória, disco, I/O de rede
+![Node Exporter Full - ID 1860](images/grafana1.png)
+
+Infos de pods  
+![grafana-node-exporter](images/grafana2.png)
 
 
 
