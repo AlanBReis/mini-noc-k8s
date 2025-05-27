@@ -1,3 +1,6 @@
 prometheus:
   prometheusSpec:
     maximumStartupDurationSeconds: 300
+
+alertmanager:
+  configMapOverrideName: alertmanager-config

@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: cpu-high
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  groups:
+  - name: example-alert
+    rules:
+    - alert: HighCPUUsage
+      expr: 100 * (1 - avg by(instance)(rate(node_cpu_seconds_total{mode="idle"}[1m]))) > 0
+      for: 10s
+      labels:
+        severity: warning
+      annotations:
+        summary: "Alta utilização de CPU no node"
+        description: "O uso da CPU está acima de 0% na instância {{ $labels.instance }}"
